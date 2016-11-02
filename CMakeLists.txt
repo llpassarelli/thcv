@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+PROJECT( thcv_proj )
+SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread")
+FIND_PACKAGE( OpenCV REQUIRED )
+ADD_EXECUTABLE( thcv thcv.cpp )
+TARGET_LINK_LIBRARIES( thcv ${OpenCV_LIBS} ${CMAKE_THREAD_LIBS_INIT} )
